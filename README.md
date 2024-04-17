@@ -10,15 +10,15 @@ The form submit button does not currently have functionality, and email validati
 
 ### Single Page Portfolio | Desktop
 
-![Single Page Portfolio | Desktop]()
+![Single Page Portfolio | Desktop](https://github.com/lenanle333/Single-Page-Developer-Portfolio/blob/848d935e9af910b95736b4be7f0ea1179fdff9df/assets/screenshots/Single%20Page%20Developer%20Portfolio%20Desktop.jpeg)
 
 ### Single Page Portfolio | Tablet
 
-![Single Page Portfolio | Tablet]()
+![Single Page Portfolio | Tablet](https://github.com/lenanle333/Single-Page-Developer-Portfolio/blob/848d935e9af910b95736b4be7f0ea1179fdff9df/assets/screenshots/Single%20Page%20Developer%20Portfolio%20Tablet.jpeg)
 
 ### Single Page Portfolio | Mobile
 
-![Single Page Portfolio | Mobile]()
+![Single Page Portfolio | Mobile](https://github.com/lenanle333/Single-Page-Developer-Portfolio/blob/848d935e9af910b95736b4be7f0ea1179fdff9df/assets/screenshots/Single%20Page%20Developer%20Portfolio%20Mobile.jpeg)
 
 ## Disclaimer
 
