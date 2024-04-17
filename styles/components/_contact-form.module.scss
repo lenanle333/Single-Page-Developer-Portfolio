@@ -31,6 +31,16 @@
 					color: transparent;
 				}
 			}
+			input:-webkit-autofill {
+				-webkit-box-shadow: 0 0 0 50px $gray-100 inset;
+				-webkit-text-fill-color: $primary-white;
+			}
+
+			input:-webkit-autofill:focus {
+				@include base();
+				-webkit-box-shadow: 0 0 0 50px $gray-100 inset;
+				-webkit-text-fill-color: $primary-white;
+			}
 			textarea {
 				height: px_rem(100);
 				resize: none;
