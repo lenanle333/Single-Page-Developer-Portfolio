@@ -25,6 +25,8 @@
 				border-bottom: px_rem(1) solid $primary-white;
 				background: transparent;
 				transition: border-color 0.2s;
+				border-radius: 0;
+				-webkit-appearance: none;
 				&::placeholder {
 					color: transparent;
 				}
