@@ -9,38 +9,57 @@
 		@include flex-h-center();
 		row-gap: px_rem(32);
 
-		div {
+		.inputWrapper {
 			position: relative;
-
+			padding: px_rem(16) 0 0;
 			width: 100%;
-			label {
-				display: none;
-			}
+
 			input,
 			textarea {
-				width: 100%;
-				@include base();
 				display: flex;
-				background-color: transparent;
-				border-bottom: px_rem(1) solid $primary-white;
-				color: $primary-white;
-
-				padding: 0 px_rem(24) px_rem(16);
-
-				text-transform: uppercase;
+				width: 100%;
+				padding: px_rem(4) px_rem(0);
+				@include base();
 				letter-spacing: px_rem(-0.22);
+				color: $primary-white;
+				border-bottom: px_rem(1) solid $primary-white;
+				background: transparent;
+				transition: border-color 0.2s;
 				&::placeholder {
-					opacity: 50%;
-					color: $primary-white;
-				}
-				&:focus {
-					border-bottom: px_rem(1) solid $primary-green;
+					color: transparent;
 				}
 			}
 			textarea {
-				height: px_rem(107);
+				height: px_rem(100);
 				resize: none;
 			}
+			input:placeholder-shown ~ label,
+			textarea:placeholder-shown ~ label {
+				@include base();
+				text-transform: uppercase;
+				cursor: text;
+				opacity: 50%;
+				color: $primary-white;
+				top: px_rem(19.2);
+			}
+			label,
+			input:focus ~ .label {
+				@include base();
+				text-transform: uppercase;
+				position: absolute;
+				top: px_rem(-6);
+				display: block;
+				color: $primary-white;
+				left: px_rem(-1);
+				transition: 0.3s;
+			}
+			input:focus ~ label {
+				color: $primary-white;
+			}
+			input:focus {
+				border-bottom: 1px solid $primary-green;
+			}
+
 			&:nth-child(2) {
 				@include flex-h-center();
 				p {

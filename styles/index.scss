@@ -14,6 +14,8 @@
 body {
 	font-family: "Space Grotesk", sans-serif;
 	background-color: $primary-black;
+	overflow-x: hidden;
+	width: 100vw;
 }
 
 button {

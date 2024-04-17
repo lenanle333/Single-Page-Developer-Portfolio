@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/components/_contact-form.module.scss";
 import btn from "../../styles/utilities/_buttons.module.scss";
-import Image from "next/image";
 const ContactForm = () => {
 	const validate = (newInputs: Inputs): Errors => {
 		const newErrors: Errors = {};
@@ -24,24 +23,23 @@ const ContactForm = () => {
 	return (
 		<div className={styles.container}>
 			<form action="">
-				<div>
-					<label htmlFor="name">Name</label>
+				<div className={styles.inputWrapper}>
 					<input
-						autoComplete="name"
-						placeholder="name"
-						type="text"
 						name="name"
+						type="text"
+						placeholder="name"
+						autoComplete="name"
 					/>
+					<label htmlFor="name">Name</label>
 				</div>
-				<div>
-					<label htmlFor="email">Email</label>
+				<div className={styles.inputWrapper}>
 					{errors.email && touched.email ? (
 						<input
-							style={{ borderBottom: "solid 1px hsl(7, 100%, 68%)" }}
-							placeholder="email"
-							type="email"
 							name="email"
+							type="email"
+							placeholder="email"
 							autoComplete="email"
+							style={{ borderBottom: "solid 1px hsl(7, 100%, 68%)" }}
 							onChange={(event) => {
 								setInputs({ ...inputs, email: event.target.value });
 								setErrors(validate({ ...inputs, email: event.target.value }));
@@ -51,9 +49,10 @@ const ContactForm = () => {
 						/>
 					) : (
 						<input
-							placeholder="email"
-							type="email"
 							name="email"
+							type="email"
+							placeholder="email"
+							autoComplete="email"
 							onChange={(event) => {
 								setInputs({ ...inputs, email: event.target.value });
 								setErrors(validate({ ...inputs, email: event.target.value }));
@@ -63,10 +62,11 @@ const ContactForm = () => {
 						/>
 					)}
 					{errors.email && touched.email ? <p>{errors.email}</p> : null}
+					<label htmlFor="email">Email</label>
 				</div>
-				<div>
+				<div className={styles.inputWrapper}>
+					<textarea name="message" placeholder="message" />
 					<label htmlFor="message">Message</label>
-					<textarea placeholder="message" name="message" />
 				</div>
 				<button
 					onClick={(event) => {

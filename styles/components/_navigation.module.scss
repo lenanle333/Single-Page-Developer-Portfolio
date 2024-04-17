@@ -22,11 +22,14 @@
 			@include flex-center();
 			cursor: pointer;
 			img {
-				transition: all 500ms ease;
 				-webkit-backface-visibility: hidden;
 				backface-visibility: hidden;
 				-webkit-transform: translateZ(0) scale(1, 1);
 				transform: translateZ(0) scale(1, 1);
+				&:hover {
+					filter: brightness(0) saturate(100%) invert(90%) sepia(46%)
+						saturate(704%) hue-rotate(73deg) brightness(95%) contrast(86%);
+				}
 			}
 		}
 		@include tablet {

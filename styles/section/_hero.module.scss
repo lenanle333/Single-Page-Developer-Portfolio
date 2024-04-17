@@ -7,6 +7,7 @@
 	@include flex-h-center();
 
 	.rings {
+		overflow: hidden;
 		position: absolute;
 		right: calc((100vw - px_rem(400)) / 2 + px_rem(220));
 		top: px_rem(124);
@@ -67,6 +68,7 @@
 		@include flex-h-center();
 		text-align: center;
 		h1 {
+			width: 100vw;
 			@include h1();
 			color: $primary-white;
 			span {

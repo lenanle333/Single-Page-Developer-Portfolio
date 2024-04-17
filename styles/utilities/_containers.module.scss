@@ -16,6 +16,7 @@
 
 .mainContainer {
 	display: flex;
+	overflow: hidden;
 	flex-direction: column;
 	padding: 0 px_rem(30);
 	transition: all 100ms ease;
