@@ -1,0 +1,58 @@
+@import "../utilities/colors.module";
+@import "../utilities/mixins.module";
+
+@mixin h1 {
+	font-weight: 700;
+	font-size: px_rem(40);
+	letter-spacing: px_rem(-1.14);
+	line-height: px_rem(40);
+	@include tablet {
+		font-size: px_rem(72);
+		letter-spacing: px_rem(-2.05);
+		line-height: px_rem(72);
+	}
+	@include desktop {
+		font-size: px_rem(88);
+		letter-spacing: px_rem(-2.5);
+		line-height: px_rem(88);
+	}
+}
+@mixin h2 {
+	font-weight: 700;
+	font-size: px_rem(32);
+	line-height: px_rem(40);
+	letter-spacing: px_rem(-1);
+	@include tablet {
+		font-size: px_rem(48);
+		line-height: px_rem(56);
+		letter-spacing: px_rem(-1.5);
+	}
+}
+@mixin h3 {
+	font-weight: 700;
+	font-size: px_rem(24);
+	line-height: px_rem(32);
+	letter-spacing: px_rem(-0.33);
+	@include tablet {
+		font-size: px_rem(32);
+		line-height: px_rem(32);
+		letter-spacing: px_rem(-0.44);
+	}
+}
+@mixin base {
+	font-weight: 500;
+	font-size: px_rem(16);
+	line-height: px_rem(26);
+	@include tablet {
+		font-size: px_rem(18);
+		line-height: px_rem(28);
+	}
+}
+@mixin btn-text {
+	@include base();
+	font-size: px_rem(16);
+	line-height: px_rem(26);
+	font-weight: 700;
+	letter-spacing: px_rem(2.29);
+	text-transform: uppercase;
+}

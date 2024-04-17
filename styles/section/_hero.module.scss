@@ -1,0 +1,136 @@
+@import "../utilities/containers.module";
+@import "../utilities/mixins.module";
+@import "../utilities/headers.module";
+@import "../utilities/colors.module";
+
+.container {
+	@include flex-h-center();
+
+	.rings {
+		position: absolute;
+		right: calc((100vw - px_rem(400)) / 2 + px_rem(220));
+		top: px_rem(124);
+		z-index: 0;
+		@include tablet {
+			top: px_rem(86);
+			left: calc((100vw - px_rem(1100)) / 2 - px_rem(200));
+		}
+		@include desktop {
+			top: px_rem(133);
+			left: calc((100vw - px_rem(1400)) / 2 - px_rem(200));
+		}
+	}
+	.circle {
+		position: absolute;
+		width: px_rem(129);
+		height: px_rem(129);
+		right: calc((100vw - px_rem(400)) / 2 - px_rem(80));
+		top: px_rem(254);
+		@include tablet {
+			top: px_rem(471);
+			right: px_rem(-70);
+		}
+		@media screen and (min-width: 1100px) {
+			right: calc((100vw - px_rem(740)) / 10 - px_rem(50));
+		}
+		@include desktop {
+			top: px_rem(521);
+			left: calc((100vw - px_rem(1400)) / 2 + px_rem(810));
+		}
+	}
+	.profile {
+		position: relative;
+		z-index: 1;
+		margin: px_rem(-96) 0 px_rem(40);
+		width: px_rem(174);
+		height: px_rem(383);
+		@include tablet {
+			position: absolute;
+			z-index: 0;
+			right: 0;
+			top: 0;
+			margin: 0;
+			width: px_rem(322);
+			height: px_rem(600);
+		}
+		@media screen and (min-width: 1100px) {
+			right: calc((100vw - px_rem(600)) / 10);
+		}
+		@include desktop {
+			right: calc((100vw - px_rem(1400)) / 2 + px_rem(79.9));
+			width: px_rem(445);
+			height: px_rem(720);
+		}
+	}
+
+	.textContainer {
+		@include flex-h-center();
+		text-align: center;
+		h1 {
+			@include h1();
+			color: $primary-white;
+			span {
+				text-decoration: underline $primary-green;
+			}
+			@include tablet {
+				z-index: 1;
+				width: fit-content;
+			}
+		}
+		p {
+			@include base();
+			margin: px_rem(24) 0;
+			color: $gray-200;
+			@include tablet {
+				margin: px_rem(60) 0 px_rem(34);
+			}
+		}
+
+		.tabletBR,
+		.desktopBR {
+			display: none;
+		}
+		@include tablet {
+			align-items: flex-start;
+			margin-top: px_rem(90);
+
+			text-align: left;
+			.mobileBR,
+			.desktopBR {
+				display: none;
+			}
+			.tabletBR {
+				display: inline;
+			}
+		}
+		@include desktop {
+			margin-top: px_rem(130);
+			.desktopBR {
+				display: inline;
+			}
+			.mobileBR,
+			.tabletBR {
+				display: none;
+			}
+		}
+	}
+	@include tablet {
+		align-items: flex-start;
+
+		.profileTablet {
+			z-index: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	@include desktop {
+		.profileDesktop {
+			position: absolute;
+			top: 0;
+			right: px_rem(165);
+			width: px_rem(445);
+			height: px_rem(720);
+		}
+	}
+}

@@ -1,0 +1,71 @@
+@import "../utilities/colors.module";
+@import "../utilities/containers.module";
+@import "../utilities/headers.module";
+@import "../utilities/mixins.module";
+
+.navBar {
+	@include flex-h-center();
+
+	margin-top: px_rem(20);
+	z-index: 2;
+
+	.logo {
+		@include h3();
+		color: $primary-white;
+	}
+
+	.linksBar {
+		display: flex;
+		margin-top: px_rem(20);
+		column-gap: px_rem(24.6);
+		a {
+			@include flex-center();
+			cursor: pointer;
+			img {
+				transition: all 500ms ease;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-webkit-transform: translateZ(0) scale(1, 1);
+				transform: translateZ(0) scale(1, 1);
+			}
+		}
+		@include tablet {
+			margin-top: 0;
+			column-gap: px_rem(32);
+			margin-left: auto;
+		}
+	}
+	@include tablet {
+		flex-direction: row;
+		margin-top: px_rem(29);
+		width: 100%;
+	}
+	@media screen and (min-width: 1100px) {
+		padding-right: px_rem(30);
+	}
+	@include desktop {
+		margin-top: px_rem(39);
+	}
+}
+
+.footer {
+	background-color: $gray-100;
+	width: 100vw;
+	margin-left: px_rem(-30);
+	padding: px_rem(39) px_rem(16) px_rem(60);
+	.line {
+		padding-top: px_rem(87);
+		border-bottom: 1px solid $primary-white;
+		height: 1px;
+		width: 100%;
+	}
+	@include tablet {
+		margin-left: calc(-1 * ((100vw - px_rem(600)) / 10 + px_rem(19)));
+		padding: 0 calc((100vw - px_rem(600)) / 10 + px_rem(19)) px_rem(40);
+	}
+	@include desktop {
+		margin-left: calc(-1 * ((100vw - px_rem(1400)) / 2 + px_rem(79.9)));
+
+		padding: 0 calc((100vw - px_rem(1400)) / 2 + px_rem(79.9)) px_rem(92);
+	}
+}

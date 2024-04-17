@@ -1,0 +1,74 @@
+@import "../utilities/containers.module";
+@import "../utilities/mixins.module";
+@import "../utilities/headers.module";
+@import "../utilities/colors.module";
+
+.container {
+	@include flex-h-center();
+	position: relative;
+	margin-top: px_rem(80);
+	padding: px_rem(40) 0;
+
+	border-top: solid $primary-white px_rem(1);
+	border-bottom: solid $primary-white px_rem(1);
+
+	text-align: center;
+	row-gap: px_rem(24);
+	column-gap: px_rem(7);
+
+	.skill {
+		width: fit-content;
+	}
+	h2 {
+		@include h2();
+		color: $primary-white;
+		margin-bottom: px_rem(1);
+		@include tablet {
+			margin-bottom: px_rem(14);
+		}
+	}
+	p {
+		@include base();
+		color: $gray-200;
+		text-wrap: nowrap;
+	}
+	.rings {
+		position: absolute;
+		top: px_rem(540);
+		right: calc((100vw - px_rem(2100)) / 5);
+		@include tablet {
+			top: px_rem(387);
+			right: calc((100vw - px_rem(2600)) / 5);
+		}
+		@media screen and (min-width: px_rem(1100)) {
+			top: px_rem(260);
+			right: calc((100vw - px_rem(3200)) / 5);
+		}
+		@include desktop {
+			top: px_rem(253);
+			right: calc(((100vw - px_rem(3200)) / 10 - px_rem(200)));
+		}
+	}
+	@include tablet {
+		display: inline-grid;
+		align-self: center;
+		justify-content: space-between;
+		width: 100%;
+		grid-template-columns: auto auto;
+		row-gap: px_rem(52);
+
+		margin-top: px_rem(60);
+		padding: px_rem(52) 0 0;
+		text-align: left;
+		border-top: px_rem(1) solid $primary-white;
+		border-bottom: none;
+	}
+	@media screen and (min-width: 900px) {
+		grid-template-columns: auto auto auto;
+		padding-top: px_rem(72);
+		padding-bottom: 0;
+	}
+	@include desktop {
+		margin-top: px_rem(219);
+	}
+}

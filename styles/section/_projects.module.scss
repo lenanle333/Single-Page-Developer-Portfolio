@@ -1,0 +1,38 @@
+@import "../utilities/containers.module";
+@import "../utilities/mixins.module";
+@import "../utilities/headers.module";
+@import "../utilities/colors.module";
+
+.container {
+	.headerContainer {
+		margin-top: px_rem(80);
+		@include flex-h-center();
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: px_rem(40);
+		h2 {
+			@include h1();
+			color: $primary-white;
+		}
+		@include tablet {
+			margin: px_rem(100) 0 px_rem(60);
+		}
+		@include desktop {
+			margin: px_rem(140) 0 px_rem(80);
+		}
+	}
+	.projectsCards {
+		@include flex-h-center();
+		row-gap: px_rem(40);
+		@include tablet {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: px_rem(22);
+			row-gap: px_rem(60);
+		}
+		@include desktop {
+			column-gap: px_rem(30);
+			row-gap: px_rem(69);
+		}
+	}
+}

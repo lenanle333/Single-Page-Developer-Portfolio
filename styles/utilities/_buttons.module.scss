@@ -1,0 +1,25 @@
+@import "../utilities/mixins.module";
+@import "../utilities/colors.module";
+@import "../utilities/headers.module";
+
+.primaryBtn {
+	@include btn-text();
+	font-size: px_rem(16) !important;
+	color: $primary-white;
+	padding-bottom: px_rem(15);
+
+	background: linear-gradient(to right, $primary-green, $primary-green),
+		linear-gradient(
+			to right,
+			rgba(255, 0, 0, 1),
+			rgba(255, 0, 180, 1),
+			rgba(0, 100, 200, 1)
+		);
+	background-size: 100% px_rem(3), 0 px_rem(3);
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	transition: background-size 400ms;
+	&:hover {
+		background-size: 0 px_rem(3), 100% px_rem(3);
+	}
+}

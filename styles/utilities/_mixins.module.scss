@@ -1,0 +1,15 @@
+@use "sass:math";
+@function px_rem($px) {
+	@return math.div($px, 16) + rem;
+}
+
+@mixin tablet {
+	@media (min-width: 740px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width: 1400px) {
+		@content;
+	}
+}

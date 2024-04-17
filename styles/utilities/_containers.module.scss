@@ -1,0 +1,28 @@
+@import "/styles/utilities/mixins.module";
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+@mixin flex-h-center {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+@mixin flex-v-center {
+	display: flex;
+	justify-content: center;
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 0 px_rem(30);
+	transition: all 100ms ease;
+	@include tablet {
+		padding: 0 calc((100vw - px_rem(600)) / 10 + px_rem(19));
+	}
+	@include desktop {
+		padding: 0 calc((100vw - px_rem(1400)) / 2 + px_rem(79.9));
+	}
+}

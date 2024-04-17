@@ -1,0 +1,66 @@
+@import "../utilities/colors.module";
+@import "../utilities/containers.module";
+@import "../utilities/headers.module";
+@import "../utilities/mixins.module";
+
+.container {
+	@include flex-h-center();
+	background-color: $gray-100;
+	width: 100vw;
+
+	padding: px_rem(60) px_rem(16) 0;
+	margin-top: px_rem(80);
+	margin-left: px_rem(-30);
+	text-align: center;
+	position: relative;
+
+	h2 {
+		@include h1();
+		color: $primary-white;
+		margin-bottom: px_rem(20);
+		@include desktop {
+			margin-bottom: px_rem(32);
+		}
+	}
+	p {
+		@include base();
+		color: $gray-200;
+		margin-bottom: px_rem(50);
+		max-width: px_rem(418);
+		@include tablet {
+			margin-bottom: px_rem(48);
+			max-width: px_rem(582);
+		}
+	}
+	.rings {
+		position: absolute;
+		top: px_rem(436);
+		left: calc((100vw - px_rem(400)) / 2 - px_rem(330));
+		@include tablet {
+			top: px_rem(547);
+			left: calc((100vw - px_rem(740)) / 2 - px_rem(390));
+		}
+		@include desktop {
+			top: px_rem(327);
+			left: calc((100vw - px_rem(1400)) / 2 - px_rem(250));
+		}
+	}
+
+	@include tablet {
+		margin-top: px_rem(100);
+		margin-left: calc(-1 * ((100vw - px_rem(600)) / 10 + px_rem(19)));
+		padding-right: calc((100vw - px_rem(740)) / 10 + px_rem(150));
+		padding-left: calc((100vw - px_rem(740)) / 10 + px_rem(150));
+	}
+	@include desktop {
+		margin-top: px_rem(139);
+		padding-top: px_rem(84);
+		margin-left: calc(-1 * ((100vw - px_rem(1400)) / 2 + px_rem(79.9)));
+		flex-direction: row;
+		text-align: left;
+		justify-content: space-between;
+		padding-right: calc((100vw - px_rem(1400)) / 2 + px_rem(150));
+		padding-left: calc((100vw - px_rem(1400)) / 2 + px_rem(150));
+		align-items: start;
+	}
+}

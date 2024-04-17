@@ -1,0 +1,65 @@
+@import "../utilities/colors.module";
+@import "../utilities/containers.module";
+@import "../utilities/headers.module";
+@import "../utilities/mixins.module";
+
+.container {
+	width: 100%;
+	form {
+		@include flex-h-center();
+		row-gap: px_rem(32);
+
+		div {
+			position: relative;
+
+			width: 100%;
+			label {
+				display: none;
+			}
+			input,
+			textarea {
+				width: 100%;
+				@include base();
+				display: flex;
+				background-color: transparent;
+				border-bottom: px_rem(1) solid $primary-white;
+				color: $primary-white;
+
+				padding: 0 px_rem(24) px_rem(16);
+
+				text-transform: uppercase;
+				letter-spacing: px_rem(-0.22);
+				&::placeholder {
+					opacity: 50%;
+					color: $primary-white;
+				}
+				&:focus {
+					border-bottom: px_rem(1) solid $primary-green;
+				}
+			}
+			textarea {
+				height: px_rem(107);
+				resize: none;
+			}
+			&:nth-child(2) {
+				@include flex-h-center();
+				p {
+					margin-top: px_rem(5);
+					margin-bottom: 0;
+					font-weight: 500;
+					font-size: px_rem(12);
+					line-height: px_rem(16);
+					letter-spacing: px_rem(-0.17);
+					color: $error;
+					align-self: flex-end;
+				}
+			}
+		}
+		button {
+			align-self: flex-end;
+		}
+		@include desktop {
+			margin-left: px_rem(220);
+		}
+	}
+}

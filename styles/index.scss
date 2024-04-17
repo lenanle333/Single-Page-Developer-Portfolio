@@ -1,0 +1,32 @@
+@import "styles/utilities/colors.module";
+@import "styles/utilities/mixins.module";
+@import "styles/utilities/headers.module";
+@import "styles/utilities/colors.module";
+@font-face {
+	font-family: "Space Grotesk";
+	src: url(../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Space Grotesk", sans-serif;
+	background-color: $primary-black;
+}
+
+button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+input,
+textarea {
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}
