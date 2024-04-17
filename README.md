@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a single-page portfolio website built with Next.js, TypeScript, and React.js. The goal of the project was to replicate a provided design as closely as possible while ensuring responsiveness across various devices.
+This project is a single-page portfolio website built with Next.js, TypeScript, React.js, and Sass. The goal of the project was to replicate a provided design as closely as possible while ensuring responsiveness across various devices.
 
 ### Notes
 
